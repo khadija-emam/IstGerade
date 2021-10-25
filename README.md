@@ -2,7 +2,7 @@
 
 # What is the project
 this app is used to check if a number is odd or even 
-it is in german language
+.it is in german language
 
 # Main Features
 1. Kotlin
