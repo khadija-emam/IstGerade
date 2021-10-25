@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IstGerade</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="error_number_message">Fehlernummernformatierung</string>
+    <string name="network_error">Netzwerkfehler</string>
+    <string name="write_number">Schreibe die Zahl</string>
+    <string name="send">senden</string>
+    <string name="even">gerade!</string>
+    <string name="odd">ungerade!</string>
+    <string name="number_message">Die zahl %d ist</string>
+    <string name="ad_pop">ad pop up</string>
+</resources>

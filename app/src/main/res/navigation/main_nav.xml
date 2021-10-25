@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/numberListFragment">
+    <fragment
+        android:id="@+id/numberListFragment"
+        android:name="com.istgerade.numberlist.NumberListFragment"
+        android:label="NumberListFragment"
+        tools:layout="@layout/fragment_number_list">
+        <action
+            android:id="@+id/action_numberListFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogFragment"
+        android:name="com.istgerade.dialog.DialogFragment"
+        android:label="DialogFragment"
+        tools:layout="@layout/dialog_fragment">
+        <argument
+            android:name="ad"
+            app:argType="string"
+            app:nullable="true" />
+    </dialog>
+</navigation>

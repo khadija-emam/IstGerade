@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+         <variable
+    name="viewModel"
+    type="com.istgerade.numberlist.NumberListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".numberlist.NumberListFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/previous_num_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/number_list_item"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/number_lin"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+      <LinearLayout
+          android:id="@+id/number_lin"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:background="@drawable/top_curved_shape"
+
+          app:layout_constraintBottom_toBottomOf="parent">
+
+          <EditText
+              android:id="@+id/number_et"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="2"
+              android:padding="6dp"
+              android:layout_marginVertical="32dp"
+              android:layout_marginHorizontal="8dp"
+              android:background="@drawable/curved_shape"
+              android:inputType="number"
+              android:hint="@string/write_number"
+              android:text="@={viewModel.userNumber}"
+              />
+          <Button
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginEnd="8dp"
+              android:text="@string/send"
+              android:layout_marginVertical="32dp"
+              android:backgroundTint="@android:color/holo_red_dark"
+              android:onClick="@{()->viewModel.isEven()}"
+              />
+
+      </LinearLayout>
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
