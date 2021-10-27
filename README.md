@@ -1,7 +1,7 @@
 # IstGerade
 
 # What is the project
-this app is used to check if a number is odd or even. </b>it is in german language
+this app is used to check if a number is odd or even. <br>it is in german language
 
 # Main Features
 1. Kotlin
